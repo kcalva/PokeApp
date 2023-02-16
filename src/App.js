@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react"
+import logo from "./assets/images/logo.png"
+import "./App.css"
+import { getPokeTypes } from "./API/API"
 
-function App() {
+const App = () => {
+  // const [typesList, setTypesList] = useState([])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img src={logo} className="App-logo" alt="logo" />
+      <header className="App-header">Kevin's Pokemon App</header>
+      <button onClick={getPokeTypes}>Click on this to see api</button>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
