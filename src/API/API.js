@@ -17,22 +17,7 @@ const createRestOptions = (options) => {
 }
 
 export const getPokeTypes = async () => {
-  let typesArr = []
   let numOfTypes = 18
-  /**TODO:
-   * Getting specific things that I need from the JSON.
-   * Not all the data will be needed
-   * {
-      type1Name: {
-            damage_relations:{},
-
-
-      },
-      type2Name:{
-        
-      }
-    }
-   */
   let typeData = {}
 
   for (let index = 0; index < numOfTypes; index++) {
@@ -40,11 +25,14 @@ export const getPokeTypes = async () => {
       `${BASE_URL}/type/${index + 1}`,
       createRestOptions({ method: "GET" })
     )
-    // //create a object instead and push the keys that I want
-    // //ex let typeData = {}
-    // // typeData["name"] = type.name
-    typesArr.push(type)
+    typeData[type.name] = {
+      damage_relations: type.damage_relations,
+      pokemon: type.pokemon,
+      moves: type.moves,
+      past_damage_relations: type.past_damage_relations,
+      id: type.id,
+    }
   }
-  console.log("typesArr ", typesArr)
-  return typesArr
+  console.log(typeData)
+  return typeData
 }
