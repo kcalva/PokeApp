@@ -33,6 +33,5 @@ export const getPokeTypes = async () => {
       id: type.id,
     }
   }
-  console.log(typeData)
   return typeData
 }
