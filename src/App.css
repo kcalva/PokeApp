@@ -1,24 +1,101 @@
 .App {
   background-color: #282c34;
-  min-height: 100vh;
-}
-
-.App-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .App-logo {
 }
 
 .App-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
   margin-bottom: 20px;
 }
 
-.Button {
-  margin-bottom: 20px;
+.Type-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  font-size: 1.25rem;
+  color: white;
+  /* will change these to percentages (for mobile responsiveness) */
+  width: 159px;
+  height: 40px;
+}
+
+#Type-1 {
+  background: #a8a878;
+  border: 1px solid #6d6d4e;
+}
+
+#Type-2 {
+  background: #c03028;
+  border: 1px solid #7d1f1a;
+}
+#Type-3 {
+  background: #a890f0;
+  border: 1px solid #6d5e9c;
+}
+#Type-4 {
+  background: #a040a0;
+  border: 1px solid #682a68;
+}
+#Type-5 {
+  background: #e0c068;
+  border: 1px solid #927d44;
+}
+#Type-6 {
+  background: #b8a038;
+  border: 1px solid #786824;
+}
+#Type-7 {
+  background: #a8b820;
+  border: 1px solid #6d7815;
+}
+#Type-8 {
+  background: #705898;
+  border: 1px solid #493963;
+}
+#Type-9 {
+  background: #b8b8d0;
+  border: 1px solid #787887;
+}
+#Type-10 {
+  background: #f08030;
+  border: 1px solid #9c531f;
+}
+#Type-11 {
+  background: #6890f0;
+  border: 1px solid #445e9c;
+}
+#Type-12 {
+  background: #78c850;
+  border: 1px solid #4e8234;
+}
+#Type-13 {
+  background: #f8d030;
+  border: 1px solid #a1871f;
+}
+#Type-14 {
+  background: #f85888;
+  border: 1px px solid #a13959;
+}
+#Type-15 {
+  background: #98d8d8;
+  border: 1px solid #638d8d;
+}
+#Type-16 {
+  background: #7038f8;
+  border: 1px solid #4924a1;
+}
+#Type-17 {
+  background: #705848;
+  border: 1px solid #49392f;
+}
+#Type-18 {
+  background: #ee99ac;
+  border: 1px solid #9b6470;
 }
