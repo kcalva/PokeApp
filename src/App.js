@@ -11,7 +11,7 @@ const App = () => {
       setTypeData(pokeTypesInfo)
     }
     fetchData()
-  })
+  }, [])
   return (
     <div className="App">
       <img src={logo} className="App-logo" alt="logo" />
@@ -19,8 +19,16 @@ const App = () => {
       {typeData
         ? Object.keys(typeData).map((typeName, index) => {
             return (
-              <div id={`Type-${index + 1}`} className="Type-name" key={index}>
-                {typeName.toUpperCase()}
+              <div key={index}>
+                <div id={`Type-${index + 1}`} className="Type-name">
+                  {typeName.toUpperCase()}
+                </div>
+                <div className="App-header">Weak against</div>
+                {typeData[typeName].damage_relations.double_damage_from.map(
+                  (x, index) => (
+                    <div key={index}>{x.name}</div>
+                  )
+                )}
               </div>
             )
           })
