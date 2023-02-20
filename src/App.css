@@ -99,3 +99,7 @@
   background: #ee99ac;
   border: 1px solid #9b6470;
 }
+
+.SubType-name {
+  display: flex;
+}

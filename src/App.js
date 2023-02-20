@@ -26,9 +26,16 @@ const App = () => {
                 <div className="App-header">Weak against</div>
                 {typeData[typeName].damage_relations.double_damage_from.map(
                   (x, index) => (
-                    <div key={index}>{x.name}</div>
+                    <div
+                      id={`Type-${x.url.substr(-4, 3).split("/")[1]}`}
+                      key={index}
+                      className={"SubType-name"}
+                    >
+                      {x.name}
+                    </div>
                   )
                 )}
+                <hr />
               </div>
             )
           })
