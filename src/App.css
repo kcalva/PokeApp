@@ -1,16 +1,13 @@
 .App {
   background-color: #282c34;
-}
-
-.App-logo {
+  color: white;
 }
 
 .App-header {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(12px + 2vmin);
   margin-bottom: 20px;
 }
 
@@ -19,83 +16,81 @@
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  font-size: 1.25rem;
-  color: white;
-  /* will change these to percentages (for mobile responsiveness) */
-  width: 159px;
+  font-size: calc(12px + 1vmin);
   height: 40px;
+  width: 12%;
 }
 
-#Type-1 {
+#Normal {
   background: #a8a878;
   border: 1px solid #6d6d4e;
 }
 
-#Type-2 {
+#Fighting {
   background: #c03028;
   border: 1px solid #7d1f1a;
 }
-#Type-3 {
+#Flying {
   background: #a890f0;
   border: 1px solid #6d5e9c;
 }
-#Type-4 {
+#Poison {
   background: #a040a0;
   border: 1px solid #682a68;
 }
-#Type-5 {
+#Ground {
   background: #e0c068;
   border: 1px solid #927d44;
 }
-#Type-6 {
+#Rock {
   background: #b8a038;
   border: 1px solid #786824;
 }
-#Type-7 {
+#Bug {
   background: #a8b820;
   border: 1px solid #6d7815;
 }
-#Type-8 {
+#Ghost {
   background: #705898;
   border: 1px solid #493963;
 }
-#Type-9 {
+#Steel {
   background: #b8b8d0;
   border: 1px solid #787887;
 }
-#Type-10 {
+#Fire {
   background: #f08030;
   border: 1px solid #9c531f;
 }
-#Type-11 {
+#Water {
   background: #6890f0;
   border: 1px solid #445e9c;
 }
-#Type-12 {
+#Grass {
   background: #78c850;
   border: 1px solid #4e8234;
 }
-#Type-13 {
+#Electric {
   background: #f8d030;
   border: 1px solid #a1871f;
 }
-#Type-14 {
+#Psychic {
   background: #f85888;
   border: 1px px solid #a13959;
 }
-#Type-15 {
+#Ice {
   background: #98d8d8;
   border: 1px solid #638d8d;
 }
-#Type-16 {
+#Dragon {
   background: #7038f8;
   border: 1px solid #4924a1;
 }
-#Type-17 {
+#Dark {
   background: #705848;
   border: 1px solid #49392f;
 }
-#Type-18 {
+#Fairy {
   background: #ee99ac;
   border: 1px solid #9b6470;
 }
