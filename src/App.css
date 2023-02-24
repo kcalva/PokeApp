@@ -1,6 +1,9 @@
 .App {
+  display: flex;
+  flex-direction: column;
   background-color: #282c34;
   color: white;
+  position: relative;
 }
 
 .App-header {
@@ -8,7 +11,14 @@
   align-items: center;
   justify-content: center;
   font-size: calc(12px + 2vmin);
-  margin-bottom: 20px;
+  padding-bottom: 5%;
+  padding-top: 10%;
+}
+
+.App-logo{
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .Type-name {

@@ -14,7 +14,7 @@ const App = () => {
   }, [])
   return (
     <div className="App">
-      <img src={logo} alt="logo" />
+      <img src={logo} className="App-logo" alt="logo" />
       <div className="App-header">Kevin's Pokemon App</div>
       {typeData
         ? Object.keys(typeData).map((typeName, index) => {
@@ -26,7 +26,6 @@ const App = () => {
                 >
                   {typeName.toUpperCase()}
                 </div>
-                <div className="App-header">Weak against</div>
                 {typeData[typeName].damage_relations.double_damage_from.map(
                   (typeDoubleDamage, index) => {
                     let typeName =
