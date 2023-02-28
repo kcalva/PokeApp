@@ -2,11 +2,11 @@ import React from "react"
 
 const Pokemain = ({ typeData }) => {
   return (
-    <>
+    <div className="Main-container">
       {typeData
         ? Object.keys(typeData).map((typeName, index) => {
             return (
-              <div key={index}>
+              <div key={index} className="Type-container">
                 <div
                   id={typeName.charAt(0).toUpperCase() + typeName.slice(1)}
                   className="Type-name"
@@ -19,7 +19,7 @@ const Pokemain = ({ typeData }) => {
                       typeDoubleDamage.name.charAt(0).toUpperCase() +
                       typeDoubleDamage.name.slice(1)
                     return (
-                      <div id={typeName} key={index} className={"SubType-name"}>
+                      <div id={typeName} key={index}>
                         {typeName}
                       </div>
                     )
@@ -30,7 +30,7 @@ const Pokemain = ({ typeData }) => {
             )
           })
         : null}
-    </>
+    </div>
   )
 }
 
