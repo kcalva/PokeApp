@@ -19,6 +19,7 @@ const Pokemain = ({ typeData }) => {
                       typeDoubleDamage.name.charAt(0).toUpperCase() +
                       typeDoubleDamage.name.slice(1)
                     return (
+                      /**TODO Start working on styling and adding data to this: */
                       <div id={typeName} key={index}>
                         {typeName}
                       </div>
