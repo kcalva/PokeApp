@@ -1,9 +1,6 @@
 .App {
-  display: flex;
-  flex-direction: column;
   background-color: #282c34;
   color: white;
-  position: relative;
 }
 
 .App-header {
@@ -11,14 +8,6 @@
   align-items: center;
   justify-content: center;
   font-size: calc(12px + 2vmin);
-  padding-bottom: 5%;
-  padding-top: 10%;
-}
-
-.App-logo{
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .Type-name {
@@ -29,6 +18,10 @@
   font-size: calc(12px + 1vmin);
   height: 40px;
   width: 12%;
+}
+
+.SubType-name {
+  display: flex;
 }
 
 #Normal {
@@ -105,6 +98,3 @@
   border: 1px solid #9b6470;
 }
 
-.SubType-name {
-  display: flex;
-}
