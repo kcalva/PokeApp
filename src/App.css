@@ -16,11 +16,11 @@
   flex-wrap: wrap;
 }
 
-.Type-container{
+.Type-container {
   /* you have to subtract the margin percentage to get the actual width of the entire component
     ex. if you want 50% you subtract minus 10 (margin left + margin right percentage) 
   */
-  width: 40%; 
+  width: 40%;
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: 5%;
@@ -36,7 +36,6 @@
   width: 33%;
   margin-bottom: 5%;
 }
-
 
 #Normal {
   background: #a8a878;
@@ -111,4 +110,3 @@
   background: #ee99ac;
   border: 1px solid #9b6470;
 }
-
