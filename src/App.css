@@ -1,14 +1,6 @@
 .App {
-  display: flex;
-  flex-direction: column;
   background-color: #282c34;
   color: white;
-}
-
-.App-logo{
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .App-header {
@@ -16,7 +8,6 @@
   align-items: center;
   justify-content: center;
   font-size: 2rem;
-  margin-top: 5%;
   margin-bottom: 5%;
 }
 
@@ -26,7 +17,10 @@
 }
 
 .Type-container{
-  width: 40%;
+  /* you have to subtract the margin percentage to get the actual width of the entire component
+    ex. if you want 50% you subtract minus 10 (margin left + margin right percentage) 
+  */
+  width: 40%; 
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: 5%;
@@ -40,6 +34,7 @@
   font-size: 1.5rem;
   height: 25%;
   width: 33%;
+  margin-bottom: 5%;
 }
 
 
