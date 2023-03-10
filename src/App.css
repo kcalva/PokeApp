@@ -1,3 +1,6 @@
+a:visited {
+  color: white;
+}
 .App {
   background-color: #282c34;
   color: white;
@@ -20,7 +23,7 @@
   /* you have to subtract the margin percentage to get the actual width of the entire component
     ex. if you want 50% you subtract minus 10 (margin left + margin right percentage) 
   */
-  width: 40%;
+  width: 23%;
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: 5%;

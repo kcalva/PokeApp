@@ -3,6 +3,10 @@ import logo from "./assets/images/logo.png"
 import "./App.css"
 import { getPokeTypes } from "./API/API"
 import Pokemain from "./Components/Pokemain"
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
+import NewComp from "./Components/NewComp"
+import Layout from "./Components/Layout"
+import Header from "./Components/Header"
 
 const App = () => {
   const [typeData, setTypeData] = useState()
@@ -15,9 +19,15 @@ const App = () => {
   }, [])
   return (
     <div className="App">
-      <img src={logo} className="App-logo" alt="logo" />
-      <div className="App-header">Kevin's Pokemon App</div>
-      <Pokemain typeData={typeData} />
+      <Header />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Pokemain typeData={typeData} />} />
+            <Route path="/new" element={<NewComp />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
