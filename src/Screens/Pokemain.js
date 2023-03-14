@@ -1,17 +1,7 @@
 import React from "react"
+import { Types } from "../Components"
 
-const Types = ({ typeName, typeData }) => {
-  const getTypeName = (typeName) => {
-    return (
-      <div
-        id={typeName.charAt(0).toUpperCase() + typeName.slice(1)}
-        className="Type-name"
-      >
-        {typeName.toUpperCase()}
-      </div>
-    )
-  }
-
+const Pokemain = ({ typeData }) => {
   const getWeakAgainstTypes = (typeData, typeName) => {
     return (
       <div>
@@ -34,7 +24,7 @@ const Types = ({ typeName, typeData }) => {
   }
   const getStrongAgainstTypes = (typeData, typeName) => {
     return typeData[typeName].damage_relations.double_damage_to.length > 0 ? (
-      <>
+      <div>
         <label>Strong against:</label>
         {typeData[typeName].damage_relations.double_damage_to.map(
           (typeDoubleDamageTo, i) => {
@@ -49,17 +39,25 @@ const Types = ({ typeName, typeData }) => {
             )
           }
         )}
-      </>
+      </div>
     ) : null
   }
   return (
-    <div className="Type-container">
-      {getTypeName(typeName)}
-      {getWeakAgainstTypes(typeData, typeName)}
-      {getStrongAgainstTypes(typeData, typeName)}
-      <hr />
+    <div className="Main-container">
+      {typeData
+        ? Object.keys(typeData).map((typeName, index) => {
+            return (
+              <div className="Type-container" key={index}>
+                <Types typeName={typeName} />
+                {getWeakAgainstTypes(typeData, typeName)}
+                {getStrongAgainstTypes(typeData, typeName)}
+                <hr />
+              </div>
+            )
+          })
+        : null}
     </div>
   )
 }
 
-export default Types
+export default Pokemain

@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react"
-import logo from "./assets/images/logo.png"
 import "./App.css"
 import { getPokeTypes } from "./API/API"
-import Pokemain from "./Components/Pokemain"
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
-import NewComp from "./Components/NewComp"
-import Layout from "./Components/Layout"
-import Header from "./Components/Header"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Header, Navigation } from "../src/Components/index"
+import Pokemain from "./Screens/Pokemain"
+import Pokemon from "./Screens/Pokemon"
 
 const App = () => {
   const [typeData, setTypeData] = useState()
@@ -22,9 +20,11 @@ const App = () => {
       <Header />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Navigation />}>
             <Route index element={<Pokemain typeData={typeData} />} />
-            <Route path="/new" element={<NewComp />} />
+            <Route path="/pokemon" element={<Pokemon typeData={typeData} />} />
+            {/* <Route path="/moves" element={null} /> */}
+            {/* <Route path="/pastDamageRelations" element={null} /> */}
           </Route>
         </Routes>
       </BrowserRouter>

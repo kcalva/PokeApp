@@ -1,7 +1,6 @@
 import { BASE_URL } from "./constants"
 
 const restRequest = async (url, options) => {
-  //   console.log("CALLING API: " + url, options)
   let res = await fetch(url, options)
   let json = await res.json()
   return json
