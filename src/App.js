@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import "./App.css"
 import { getPokeTypes } from "./API/API"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
@@ -37,7 +37,14 @@ const App = () => {
                 </Main>
               }
             />
-            <Route path="/pokemon" element={<Pokemon />} />
+            <Route
+              path="/pokemon"
+              element={
+                <Main>
+                  <Pokemon />
+                </Main>
+              }
+            />
             {/* <Route path="/moves" element={null} /> */}
             {/* <Route path="/pastDamageRelations" element={null} /> */}
           </Route>

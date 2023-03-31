@@ -12,7 +12,8 @@ export const Main = ({ children }) => {
             return (
               <div className="Type-container" key={index}>
                 <Types typeName={typeName} />
-                {children}
+                {React.cloneElement(children, { typeName })}
+                <hr />
               </div>
             )
           })
